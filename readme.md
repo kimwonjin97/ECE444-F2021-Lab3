@@ -2,40 +2,32 @@ Name: Won-Jin Kim
 
 this repo is a clone of https://github.com/nelaturuk/education_pathways.
 
-# CARTE Education Pathways
+# ECE444-lab3: Education Pathways Repo Setup & Docker
 
-## Description
-Welcome to CARTE's in-development tool for course selection at UofT. Education Pathways allows for more intelligent course searching, by matching not just the terms you search, but ones relevant to them. The more terms you search for, the more relevant your results will be! Even try searching across disciplines for the courses that best cover each.
+## Activity 1: Docker Installation
 
-Whatever year you are looking for, Education Pathways will also suggest courses in earlier years that will best help you to prepare. To get the most out of this, try searching for courses in a later year and see what is suggested for your current one.
+<img src="https://github.com/kimwonjin97/ECE444-F2021-Lab3/blob/master/screenshots/A1.png">
 
-We are looking for feedback to improve Education Pathways and make it more useful for students. If you have ideas or suggestions, please email us!
+## Activity 2: Cloning Education pathways repo intoyour own GitHub account
 
-## Setup Instructions
+<img src="https://github.com/kimwonjin97/ECE444-F2021-Lab3/blob/master/screenshots/A2.png">
 
-### With Docker
+## Activity 3: Building docker image
 
+<img src="https://github.com/kimwonjin97/ECE444-F2021-Lab3/blob/master/screenshots/A3.png">
 
+## Activity 4: Run docker imageon localhost
 
-## Repository files:
+### part 1: Screenshot of Flask app running on http://localhost:5000/
 
-`./Procfile ./wsgi.py` *tells gunicorn how to run the program*
+<img src="https://github.com/kimwonjin97/ECE444-F2021-Lab3/blob/master/screenshots/A4-1.png">
 
-`./environment.yml  ./requirements.txt` *specifies python requirements for anaconda and pip respectively*
+### part 2: Show the running docker image
 
-`./__init__.py` *main flask code*
+<img src="https://github.com/kimwonjin97/ECE444-F2021-Lab3/blob/master/screenshots/A4-2.png">
 
-`./readme.md` *this file*
+## Activity 5: Feedback on Education Pathways application
 
-`./resources:` *contains datasets used in the program*
+Upon running the Education Pathways application, the functional requirement that I would like to improve on is making the course cart/visualization feature available for users. In this way, users will be able to keep the records of all the courses that they would be interested to take in the future with the visual representation that shows how will potential timetable look like if those courses were to be chosen. 
 
-`course_vectorizer.pickle df_processed.pickle`
-
-`course_vectors.npz       graph.pickle`
-
-`./static:` *contains any static elements of the webpage, in this case just the CARTE logo*
-`CARTE_logo.jpg`
-
-`./templates:` *contains flask templates for rendering HTML*
-
-`_formhelpers.html course.html       index.html        results.html`
+Searching through courses in Education Pathways application was challenging for me. Therefore the non-functional requirements that I would like to improve for this website would be making search terms able to process more than one keyword by creating filters(tags) that could be applied or deleted. To be more specific, every search term would create a tag/filter that renders a list of courses based on the relevancy of the information between the tag/filter and the course name/course description/course prerequisite. Additional information inputted to the search term section would be appended to the list of tags/filters, making the search results more relevant to what users are looking for. For instance, if users first search for "math" and then search for "computers", it will search for courses that contain these two keywords and shows the list of courses in the order of relevancy. In the future, we could also utilize the data of what users searched and what they eventually selected to adopt a recommendation algorithm to our system. For now, an improvement on how search terms queries as alone would improve the usability of Education Pathways application.
